@@ -4,12 +4,12 @@ import (
 	"github.com/mtoyoshi/cleanarchitecturesample/entities"
 )
 
-type UserPresenter struct{}
+type UserPresenterForRegistering struct{}
 
-func (p UserPresenter) DoRun(result interface{}) map[string]interface{} {
+func (p UserPresenterForRegistering) DoRun(result interface{}) map[string]interface{} {
 	return map[string]interface{}{
 		"id": result.(entities.User).Id,
 	}
 }
 
-var UserPresenterInstance = UserPresenter{}
+var UserPresenterInstance = UserPresenterForRegistering{}
